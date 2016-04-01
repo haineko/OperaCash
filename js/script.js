@@ -26,7 +26,7 @@ var intro = document.querySelector(".main--intro");
 var myMap = document.getElementById("map");
 
 loader.addCompletionListener(function() { 
-    console.log('Ready to go!');
+    
     $('body').addClass('loaded');
     $(document).ready(function(){
       $('.banner').slick({
@@ -37,7 +37,7 @@ loader.addCompletionListener(function() {
           arrows: false
       });
     });
-    loader.start(['buffet', 'hall']);
+    
 });
     
 function upCurtain() {
@@ -50,6 +50,8 @@ function upCurtain() {
         curtainFooter[i].classList.add('curtain-footer--show');
       }
     });
+    console.log('Ready to go!');
+    loader.start(['buffet', 'hall']);
   } else {
     console.log("занавеса нет!");
   }
