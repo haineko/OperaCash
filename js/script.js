@@ -49,9 +49,9 @@ function upCurtain() {
       for (var i = 0; i < curtainFooter.length; i++) {
         curtainFooter[i].classList.add('curtain-footer--show');
       }
-    });
-    console.log('Ready to go!');
+      console.log('Ready to go!');
     loader.start(['buffet', 'hall']);
+    });
   } else {
     console.log("занавеса нет!");
   }
