@@ -1,8 +1,16 @@
 var loader = new PxLoader();
     loader.addImage('img/bg.jpg', 'main');
+    loader.addImage('img/bg_curtain-left.jpg', 'main');
+    loader.addImage('img/bg_curtain-right.jpg', 'main');
+    loader.addImage('img/bg_main-header.jpg', 'main');
     loader.addImage('img/bg_buffet.jpg', 'buffet');
     loader.addImage('img/bg_buffet-opera.jpg', 'buffet');
     loader.addImage('img/bg_buffet-fish.jpg', 'buffet');
+    loader.addImage('img/bg_chaliapine-new.jpg', 'hall');
+    loader.addImage('img/bg_opera-new.jpg', 'hall');
+    loader.addImage('img/bg_grand-new.jpg', 'hall');
+    loader.addImage('img/bg_pokerroom-new.jpg', 'hall');
+    loader.addImage('img/bg_imperial-new.jpg', 'hall');
 var btn = document.querySelector(".entry__btn");
 var curtain = document.querySelector(".curtain-back");
 var enrty = document.querySelector(".entry");
@@ -17,28 +25,9 @@ var slider = document.querySelector(".slider--dish");
 var intro = document.querySelector(".main--intro");
 var myMap = document.getElementById("map");
 
- var heroArray = [
-    'img/bg_buffet.jpg', 
-    'img/bg_buffet-opera.jpg', 
-    'img/bg_buffet-fish.jpg', 
-    ]
-
-function preCacheHeros(){
-    $.each(heroArray, function(){
-      console.log('записываем в кеш!');
-        var img = new Image();
-        img.src = this;
-    });
-};
- 
-$(window).load(function(){
-    preCacheHeros();
-});
-
 loader.addCompletionListener(function() { 
     console.log('Ready to go!');
     $('body').addClass('loaded');
-    
     $(document).ready(function(){
       $('.banner').slick({
           autoplay: true,
@@ -48,7 +37,7 @@ loader.addCompletionListener(function() {
           arrows: false
       });
     });
-
+    loader.start(['buffet', 'hall']);
 });
     
 function upCurtain() {
@@ -198,7 +187,7 @@ if (myMap) {
 	google.maps.event.addDomListener(window, "load", initialize);
 } 
 
-loader.start(['main', 'buffet']);
+loader.start(['main']);
 upCurtain();
 dishSlider();
 stageSlider();
