@@ -198,8 +198,7 @@ if (myMap) {
 	google.maps.event.addDomListener(window, "load", initialize);
 } 
 
-loader.start(['main']);
-
+loader.start(['main', 'buffet']);
 upCurtain();
 dishSlider();
 stageSlider();
