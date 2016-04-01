@@ -1,8 +1,8 @@
 var loader = new PxLoader();
     loader.addImage('img/bg.jpg', 'main');
-    loader.addImage('img/bg_curtain-left.jpg', 'main');
-    loader.addImage('img/bg_curtain-right.jpg', 'main');
-    loader.addImage('img/bg_main-header.jpg', 'main');
+    loader.addImage('img/curtain-left.jpg', 'main');
+    loader.addImage('img/curtain-right.jpg', 'main');
+    loader.addImage('img/bg_main-header.png', 'main');
     loader.addImage('img/bg_buffet.jpg', 'buffet');
     loader.addImage('img/bg_buffet-opera.jpg', 'buffet');
     loader.addImage('img/bg_buffet-fish.jpg', 'buffet');
